@@ -21,6 +21,7 @@ const FileUpload = () => {
         file_key,
         file_name,
       });
+      console.log("response over there");
       return response.data;
     },
   });
@@ -44,7 +45,8 @@ const FileUpload = () => {
         }
         mutate(data, {
           onSuccess: (data) => {
-            toast.success(data.message);
+            console.log(data);
+            // toast.success(data.message);
           },
           onError: (error) => {
             toast.error("error creating chat");
